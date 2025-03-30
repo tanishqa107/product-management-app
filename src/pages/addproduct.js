@@ -11,15 +11,15 @@ const AddProduct = () => {
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Handle file input change
+
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
 
-  // Upload image to Supabase Storage and return the public URL
+
   const uploadImage = async (file) => {
     const fileName = `${Date.now()}-${file.name}`;
-    // Include contentType from the file object
+  
     const { error } = await supabase.storage
       .from("product-images")
       .upload(fileName, file, { contentType: file.type });
@@ -29,17 +29,17 @@ const AddProduct = () => {
       return null;
     }
     
-    // Retrieve the public URL
+    
     const { data } = supabase.storage.from("product-images").getPublicUrl(fileName);
     return data.publicUrl;
   };
 
-  // Handle form submission
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
-    // Retrieve the current user for RLS purposes
+    
     const { data: { user } } = await supabase.auth.getUser();
     if (!user) {
       alert("User session not found. Please log in again.");
@@ -53,14 +53,14 @@ const AddProduct = () => {
       imageUrl = await uploadImage(image);
     }
 
-    // Insert the product with current user id
+    
     const { error } = await supabase.from("products").insert([
       {
         name,
         price: parseFloat(price),
         rating: parseFloat(rating),
-        image_url: imageUrl, // Ensure this matches your table column
-        user_id: user.id,    // Ensure your table has a user_id column and an appropriate RLS policy
+        image_url: imageUrl, 
+        user_id: user.id,    
       },
     ]);
 
