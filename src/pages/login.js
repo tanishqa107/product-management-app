@@ -17,7 +17,7 @@ const Login = () => {
       alert(error.message);
     } else {
       alert('Login successful!');
-      navigate('/dashboard'); // Redirect to dashboard
+      navigate('/dashboard');
     }
   };
 
