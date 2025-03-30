@@ -1,0 +1,269 @@
+/* Dashboard.css */
+:root {
+    --primary-color: #6d8b74;
+    --primary-light: #d0e8d2;
+    --secondary-color: #a7bcb9;
+    --accent-color: #e4cca8;
+    --accent-light: #f3eed9;
+    --background-color: #f5f5f0;
+    --card-background: #ffffff;
+    --card-hover: #fffaf0;
+    --text-color: #4a4a40;
+    --text-secondary: #78786c;
+    --success-color: #5f9c63;
+    --danger-color: #d67a68;
+    --border-radius: 10px;
+    --box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    --transition-speed: 0.3s;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to bottom right, rgba(228, 204, 168, 0.1), rgba(167, 188, 185, 0.1));
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    padding: 2.5rem;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(167, 188, 185, 0.2);
+  }
+  
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  h3 {
+    color: var(--primary-color);
+    margin: 2rem 0 1.5rem;
+    font-weight: 600;
+  }
+  
+  p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+  }
+  
+  /* Button styles */
+  .btn {
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed);
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    margin-right: 0.75rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    border: none;
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c96a58;
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+    color: white;
+  }
+  
+  .btn-success:hover {
+    background-color: #4f8c53;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5c7a63;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    transform: none;
+  }
+  
+  /* List group styling */
+  .list-group {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    background-color: var(--card-background);
+    border: 1px solid rgba(167, 188, 185, 0.2);
+  }
+  
+  .list-group-item {
+    padding: 1.2rem;
+    border-left: none;
+    border-right: none;
+    transition: all var(--transition-speed);
+    border-color: rgba(167, 188, 185, 0.15);
+    background-color: var(--card-background);
+  }
+  
+  .list-group-item:hover {
+    background-color: var(--card-hover);
+    border-left: 4px solid var(--accent-color);
+    padding-left: calc(1.2rem - 4px);
+  }
+  
+  .list-group-item strong {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .list-group-item img {
+    border-radius: 6px;
+    object-fit: cover;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-light);
+    transition: all var(--transition-speed);
+  }
+  
+  .list-group-item:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Price and rating styling */
+  .list-group-item div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .list-group-item div span {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    background-color: var(--accent-light);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Form select styling */
+  .mb-3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-light);
+    border-radius: var(--border-radius);
+  }
+  
+  .mb-3 label {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-right: 1rem;
+  }
+  
+  .form-select {
+    border-radius: var(--border-radius);
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--secondary-color);
+    width: 220px;
+    background-color: white;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    transition: all var(--transition-speed);
+    color: var(--text-color);
+    font-size: 0.95rem;
+  }
+  
+  .form-select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(228, 204, 168, 0.25);
+  }
+  
+  /* Pagination styling */
+  .mt-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--accent-light);
+    border-radius: var(--border-radius);
+  }
+  
+  .mt-3 span {
+    margin: 0 1.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Button container */
+  .btn-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem;
+    background-color: rgba(167, 188, 185, 0.1);
+    border-radius: var(--border-radius);
+    align-items: center;
+    border-left: 4px solid var(--secondary-color);
+  }
+  
+  /* User email styling */
+  .user-info {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light);
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Product rating stars */
+  .rating {
+    color: #f8d056;
+    margin-left: 0.5rem;
+  }
+  
+  /* No products message */
+  .list-group + p {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent-light);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    font-style: italic;
+  }
