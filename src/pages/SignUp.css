@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 
-/* Increased container size */
+
 .container {
     width: 1000px;
     padding: 3rem;
@@ -75,7 +75,7 @@ h2::after {
     border-radius: 3px;
 }
 
-/* Adjust form to fit larger container */
+
 form {
     margin-bottom: 2rem;
     width: 100%;
@@ -83,7 +83,7 @@ form {
     z-index: 1;
 }
 
-/* Form control styles */
+
 .form-control {
     width: 100%;
     border-radius: var(--border-radius);
@@ -109,7 +109,7 @@ form {
     opacity: 0.7;
 }
 
-/* Updated button styling */
+
 .btn {
     border-radius: var(--border-radius);
     transition: all var(--transition-speed);
@@ -155,7 +155,7 @@ form {
     left: 100%;
 }
 
-/* Account message */
+
 p {
     color: var(--text-secondary);
     text-align: center;
