@@ -11,7 +11,7 @@ const Dashboard = () => {
   const [page, setPage] = useState(1);
   const [totalProducts, setTotalProducts] = useState(0);
   const [sortOption, setSortOption] = useState("newest");
-  const [loggingOut, setLoggingOut] = useState(false); // Flag to avoid race conditions during logout
+  const [loggingOut, setLoggingOut] = useState(false); 
   const productsPerPage = 5;
   const navigate = useNavigate();
 
@@ -31,13 +31,13 @@ const Dashboard = () => {
     checkUser();
   }, [navigate, page, sortOption, loggingOut]);
 
-  // Fetch total product count
+  
   const fetchTotalProducts = async () => {
     const { count } = await supabase.from("products").select("*", { count: "exact" });
     setTotalProducts(count || 0);
   };
 
-  // Fetch products with sorting
+ 
   const fetchProducts = async (pageNumber, sortBy) => {
     const start = (pageNumber - 1) * productsPerPage;
     const end = start + productsPerPage - 1;
@@ -65,7 +65,7 @@ const Dashboard = () => {
     }
   };
 
-  // Handle page changes
+
   const nextPage = () => {
     if (page < Math.ceil(totalProducts / productsPerPage)) {
       setPage(page + 1);
@@ -78,7 +78,7 @@ const Dashboard = () => {
     }
   };
 
-  // Updated logout function with forced reload
+  
   const handleLogout = async () => {
     setLoggingOut(true);
     const { error } = await supabase.auth.signOut();
@@ -107,7 +107,7 @@ const Dashboard = () => {
 
       <h3>Product List</h3>
 
-      {/* Sorting Dropdown */}
+      
       <div className="mb-3">
         <label>Sort By:</label>
         <select
@@ -146,7 +146,7 @@ const Dashboard = () => {
         )}
       </ul>
 
-      {/* Pagination Controls */}
+      
       <div className="mt-3">
         <button onClick={prevPage} className="btn btn-primary me-2" disabled={page === 1}>
           Previous
