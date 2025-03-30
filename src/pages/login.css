@@ -1,4 +1,4 @@
-/* Login.css */
+
 :root {
     --primary-color: #6d8b74;
     --primary-light: #d0e8d2;
@@ -73,7 +73,7 @@
     border-radius: 3px;
   }
   
-  /* Form styling */
+
   form {
     margin-bottom: 2rem;
   }
@@ -101,7 +101,7 @@
     opacity: 0.7;
   }
   
-  /* Button styling */
+
   .btn {
     border-radius: var(--border-radius);
     transition: all var(--transition-speed);
@@ -130,7 +130,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  /* Account message styling */
+
   p {
     color: var(--text-secondary);
     text-align: center;
@@ -165,7 +165,6 @@
     width: 100%;
   }
   
-  /* Logo placeholder (optional) */
   .logo {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -176,7 +175,7 @@
     height: auto;
   }
   
-  /* Decorative elements */
+
   .login-form-decoration {
     position: absolute;
     width: 150px;
@@ -199,7 +198,7 @@
     left: -120px;
   }
   
-  /* Alert styling - for success and error messages */
+
   .alert {
     padding: 0.8rem 1rem;
     border-radius: var(--border-radius);
