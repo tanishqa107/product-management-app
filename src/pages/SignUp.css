@@ -190,7 +190,7 @@ a:hover::after {
     width: 100%;
 }
 
-/* Decorative elements */
+
 .signup-shape-1 {
     position: absolute;
     width: 250px;
@@ -213,7 +213,7 @@ a:hover::after {
     z-index: 0;
 }
 
-/* Responsive improvements */
+
 @media (max-width: 768px) {
     .container {
         width: 90%;
