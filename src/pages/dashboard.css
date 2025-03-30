@@ -1,4 +1,4 @@
-/* Dashboard.css */
+
 :root {
     --primary-color: #6d8b74;
     --primary-light: #d0e8d2;
@@ -67,7 +67,7 @@
     font-size: 1.05rem;
   }
   
-  /* Button styles */
+  
   .btn {
     border-radius: var(--border-radius);
     transition: all var(--transition-speed);
@@ -115,8 +115,7 @@
     opacity: 0.6;
     transform: none;
   }
-  
-  /* List group styling */
+
   .list-group {
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -158,7 +157,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
   
-  /* Price and rating styling */
+  
   .list-group-item div {
     display: flex;
     align-items: center;
@@ -173,7 +172,7 @@
     color: var(--text-secondary);
   }
   
-  /* Form select styling */
+
   .mb-3 {
     display: flex;
     align-items: center;
@@ -207,7 +206,7 @@
     box-shadow: 0 0 0 3px rgba(228, 204, 168, 0.25);
   }
   
-  /* Pagination styling */
+  
   .mt-3 {
     display: flex;
     align-items: center;
@@ -228,7 +227,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
   
-  /* Button container */
   .btn-container {
     display: flex;
     gap: 1rem;
@@ -240,7 +238,7 @@
     border-left: 4px solid var(--secondary-color);
   }
   
-  /* User email styling */
+  
   .user-info {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -252,13 +250,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   }
   
-  /* Product rating stars */
   .rating {
     color: #f8d056;
     margin-left: 0.5rem;
   }
   
-  /* No products message */
+ 
   .list-group + p {
     text-align: center;
     padding: 2rem;
