@@ -15,7 +15,7 @@ const Signup = () => {
     if (error) {
       alert(error.message);
     } else {
-      alert('Signup successful! Check your email for confirmation.');
+      alert('Signup successful! Now Login with same credentials');
       navigate('/login'); // Redirect to login page
     }
   };
